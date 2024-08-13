@@ -1,0 +1,32 @@
+
+services:
+  typescript-node:
+    build: 
+      context: .
+      target: prod
+    # volumes:
+    #   - .:/app
+    #   - /app/node_modules
+    ports:
+      - 80:80
+    healthcheck:
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    # depends_on:
+    #   mongo:
+    #     condition: service_healthy
+
+  mongo:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    # healthcheck:
+    #   test: echo 'db.runCommand("ping").ok' | mongo 127.0.0.1:27017/test --quiet
+
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
