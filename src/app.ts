@@ -10,6 +10,10 @@ app.get("/", (req: Request, res: Response) => {
   res.status(200).send("Hello Wrd!");
 });
 
+app.get("/api", (req: Request, res: Response) => {
+  res.status(200).send("This is an API");
+})
+
 app.get("/healthcheck", (req, res) => {
   const mongooseState = mongoose.connection.readyState;
 
