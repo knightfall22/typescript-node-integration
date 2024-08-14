@@ -18,6 +18,10 @@ app.get("/rim-world", (req: Request, res: Response) => {
   res.status(200).send("This is a rim planet");
 })
 
+app.get("/open", (req: Request, res: Response) => {
+  res.status(200).send("The gate hates your kind");
+})
+
 app.get("/healthcheck", (req, res) => {
   const mongooseState = mongoose.connection.readyState;
 
