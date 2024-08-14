@@ -40,7 +40,6 @@ jobs:
             type=semver,pattern={{major}}
             type=ref,event=branch
             type=ref,event=pr
-            type=sha
 
       #NEW: (END) ############################################################
       - name: Docker build

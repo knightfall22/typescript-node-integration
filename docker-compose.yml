@@ -1,9 +1,7 @@
 
 services:
   typescript-node:
-    build: 
-      context: .
-      target: prod
+    image: nico12/docker-ts-node:pr-2
     # volumes:
     #   - .:/app
     #   - /app/node_modules
