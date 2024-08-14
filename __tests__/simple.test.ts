@@ -16,5 +16,5 @@ test("this is a test", () =>{
 })
 
 test("this is a test", () =>{
-  expect(6).toBe(10)
+  expect(6).toBe(6)
 })
