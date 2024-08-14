@@ -14,6 +14,10 @@ app.get("/api", (req: Request, res: Response) => {
   res.status(200).send("This is an API");
 })
 
+app.get("/rim-world", (req: Request, res: Response) => {
+  res.status(200).send("This is a rim planet");
+})
+
 app.get("/healthcheck", (req, res) => {
   const mongooseState = mongoose.connection.readyState;
 
